@@ -1,0 +1,87 @@
+.about {
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    z-index: 9;
+    background-color: #fff;
+    .background {
+        background: url("@/assets/images/about.png") no-repeat;
+        width: 3rem;
+        height: 1.72rem;
+        position: fixed;
+        top: 50%;
+        left: 50%;
+        margin-left: -1.5rem;
+        margin-top: -0.86rem;
+    }
+    .back {
+        position: fixed;
+        top: .2rem;
+        left: .2rem;
+        a {
+            width: .5rem;
+            height: .5rem;
+            line-height: .5rem;
+            border-radius: .25rem;
+            font-size: .20rem;
+            text-align: center;
+            color: #fff;
+            background-color: #333;
+            transition: background-color 500ms ease-in-out, border-radius 500ms ease-in-out;
+            position: relative;
+            span {
+                position: absolute;
+                font-size: .12rem;
+                top: 50%;
+                margin-top: -.17rem;
+                left: .56rem;
+                background-color: #333;
+                width: 1rem;
+                height: .34rem;
+                line-height: .34rem;
+                border-radius: .04rem;
+                opacity: 0;
+                visibility: hidden;
+                transition: opacity 500ms ease-in-out, visibility 500ms ease-in-out;
+                &:before {
+                    display: block;
+                    content: "";
+                    position: absolute;
+                    border: .06rem solid;
+                    top: 50%;
+                    left: -.1rem;
+                    margin-top: -.06rem;
+                    border-color: transparent #333 transparent transparent;
+                }
+            }
+            &:hover {
+                background-color: #5e578e;
+                border-radius: .06rem;
+                span {
+                    visibility: visible;
+                    opacity: 1;
+                }
+            }
+        }
+    }
+    .text {
+        display: block;
+        position: relative;
+        top: 50%;
+        margin-top: -1rem;
+        text-align: center;
+        color: #666;
+    }
+    .copyright {
+        position: absolute;
+        bottom: .1rem;
+        top: auto;
+        left: 0;
+        right: 0;
+        text-align: center;
+        color: #7b7b7b;
+        user-select: none;
+    }
+}

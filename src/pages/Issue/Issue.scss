@@ -1,0 +1,230 @@
+.archive {
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    z-index: 9;
+    background-color: #fff;
+    @media only screen and (max-width: 978px) {
+        & {
+            padding-top: .45rem;
+        }
+    }
+    .back {
+        position: fixed;
+        top: .2rem;
+        left: .2rem;
+        a {
+            width: .5rem;
+            height: .5rem;
+            line-height: .5rem;
+            border-radius: .25rem;
+            font-size: .20rem;
+            text-align: center;
+            color: #fff;
+            background-color: #333;
+            transition: background-color 500ms ease-in-out, border-radius 500ms ease-in-out;
+            position: relative;
+            span {
+                position: absolute;
+                font-size: .12rem;
+                top: 50%;
+                margin-top: -.17rem;
+                left: .56rem;
+                background-color: #333;
+                width: 1rem;
+                height: .34rem;
+                line-height: .34rem;
+                border-radius: .04rem;
+                opacity: 0;
+                visibility: hidden;
+                transition: opacity 500ms ease-in-out, visibility 500ms ease-in-out;
+                &:before {
+                    display: block;
+                    content: "";
+                    position: absolute;
+                    border: .06rem solid;
+                    top: 50%;
+                    left: -.1rem;
+                    margin-top: -.06rem;
+                    border-color: transparent #333 transparent transparent;
+                }
+            }
+            &:hover {
+                background-color: #5e578e;
+                border-radius: .06rem;
+                span {
+                    visibility: visible;
+                    opacity: 1;
+                }
+            }
+        }
+    }
+    .container {
+        box-sizing: border-box;
+        max-width: 9rem;
+        margin: .2rem auto 0 auto;
+        padding: .2rem .4rem;
+        background-color: #fff;
+        border-radius: .04rem;
+        .header {
+            margin-bottom: .2rem;
+            padding-bottom: .2rem;
+            border-bottom: .01rem solid #eee;
+            h4 {
+                font-size: .2rem;
+                color: #555;
+                margin-bottom: .12rem;
+            }
+            .info {
+                font-size: .14rem;
+                color: #555;
+                :global(.fa) {
+                    height: .24rem;
+                    line-height: .24rem;
+                }
+                span {
+                    height: .24rem;
+                    line-height: .24rem;
+                    display: inline-block;
+                }
+                &:before, &:after {
+                    display: block;
+                    content: "";
+                    clear: both;
+                }
+                .created {
+                    float: left;
+                    span {
+                        margin-left: .1rem;
+                    }
+                }
+                .comments {
+                    float: right;
+                    a {
+                        display: inline-block;
+                        color: #666;
+                    }
+                }
+            }
+        }
+        .section {
+            font-size: .14rem;
+            .content {
+                display: block;
+                padding: .1rem;
+                line-height: 1.5;
+                word-wrap: break-word;
+                color: #666;
+                &:before {
+                    display: table;
+                    content: "";
+                }
+                p {
+                    margin-top: 0;
+                    margin-bottom: .16rem;
+                    text-align: justify;
+                    text-justify: inter-ideograph;
+                }
+                img {
+                    display: inline-block;
+                    max-width: 100%;
+                }
+                a {
+                    color: #00cfff;
+                }
+                a:hover {
+                    text-decoration: underline;
+                }
+                strong {
+                    color: #333;
+                    font-weight: 700;
+                }
+                p code {
+                    display: inline-block;
+                    margin: 0 2px;
+                    padding: 0 4px;
+                    color: #d05;
+                    border-radius: 3px;
+                    line-height: 20px;
+                    background: #fafafa;
+                    border: 1px solid #ddd;
+                }
+                h1, h2, h3, h4, h5, h6 {
+                    color: #454545;
+                    font-weight: 400;
+                    margin-top: 18px;
+                    margin-bottom: 12px;
+                }
+                h1 {
+                    padding: 0 0 6px;
+                    border-bottom: 1px solid #eee;
+                    font-size: 20px;
+                }
+                h2 {
+                    font-size: 18px;
+                }
+                blockquote {
+                    margin: 0;
+                    border-left: 0.25em solid #dfe2e5;
+                }
+                blockquote p {
+                    padding: 0 0 0 1em;
+                    color: #6a737d;
+                }
+                blockquote ol {
+                    padding: 0 0 0 1em;
+                    color: #6a737d;
+                }
+                ul {
+                    list-style: disc outside none;
+                    margin-left: 2em;
+                    margin-bottom: 16px;
+                    font-size: .15rem;
+                }
+                ol {
+                    list-style: decimal outside none;
+                    margin-left: 2em;
+                    margin-bottom: 16px;
+                    font-size: .15rem;
+                }
+            }
+        }
+        .footer {
+            margin-top: .2rem;
+            font-size: .15rem;
+            color: #666;
+            &:before, &:after {
+                display: block;
+                content: "";
+                clear: both;
+            }
+            :global(.fa) {
+                margin-right: .1rem;
+            }
+            .labels {
+                float: left;
+            }
+            .share {
+                float: right;
+            }
+        }
+        .comment {
+            border-top: 1px solid #999;
+            .footer {
+                .commentBtn {
+                    display: block;
+                    text-align: center;
+                    background-color: #333;
+                    color: #fff;
+                    border-radius: .04rem;
+                    padding: .08rem .16rem;
+                    transition: background-color 500ms ease-in-out;
+                    &:hover {
+                        background-color: #5e578e;
+                    }
+                }
+            }
+        }
+    }
+}

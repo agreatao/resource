@@ -1,0 +1,48 @@
+.rocket {
+    position: fixed;
+    bottom: 50px;
+    right: 50px;
+    display: inline-block;
+    width: 26px;
+    height: 48px;
+    z-index: 9999;
+    cursor: default;
+    user-select: none;
+    @media only screen and (max-width: 978px) {
+        & {
+            right: 20px;
+            bottom: 20px;
+        }
+    }
+    span {
+        display: inline-block;
+        visibility: hidden;
+        background: url('./assets/rocket.png') no-repeat 50% 0;
+        width: 26px;
+        height: 48px;
+        overflow: hidden;
+        opacity: 0;
+        transition: visibility 0.4s cubic-bezier(0.6, 0.04, 0.98, 0.335),
+                    opacity 0.4s cubic-bezier(0.6, 0.04, 0.98, 0.335),
+                    transform 0.4s cubic-bezier(0.6, 0.04, 0.98, 0.335);
+    }
+    &:hover {
+        >span {
+            background-position: 50% -62px;
+        }
+    }
+    &.show {
+        cursor: pointer;
+        >span {
+            visibility: visible;
+            opacity: 1;
+        }
+    }
+    &.launch {
+        >span {
+            transform: translateY(-500px);
+            pointer-events: none;
+            opacity: 0;
+        }
+    }
+}

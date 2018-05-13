@@ -1,0 +1,151 @@
+.home {
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    z-index: 9;
+    background-color: #fff;
+    .me {
+        position: absolute;
+        width: 3.24rem;
+        left: 50%;
+        margin-left: -1.62rem;
+        top: 50%;
+        margin-top: -.89rem;
+        height: 1.78rem;
+        .head {
+            margin-bottom: .1rem;
+            text-align: center;
+            animation: head 1s ease-in-out;
+            animation-fill-mode: both;
+            a {
+                border: .02rem solid #333;
+                width: 1rem;
+                height: 1rem;
+                border-radius: .5rem;
+                position: relative;
+                z-index: 999;
+                img {
+                    display: block;
+                    width: .96rem;
+                    height: .96rem;
+                    border-radius: .48rem;
+                }
+                &:before {
+                    display: block;
+                    position: absolute;
+                    background-color: #111;
+                    content: "骜";
+                    z-index: 1001;
+                    width: 1rem;
+                    height: 1rem;
+                    line-height: 1rem;
+                    color: #fff;
+                    font-size: .22rem;
+                    font-weight: 400;
+                    left: -.02rem;
+                    top: -.02rem;
+                    border-radius: 0.51rem;
+                    opacity: 0;
+                    visibility: hidden;
+                    transition: opacity 500ms ease-in-out, visibility 500ms ease-in-out;
+                }
+                &:hover {
+                    &:before {
+                        opacity: .8;
+                        visibility: visible;
+                    }
+                }
+            }
+        }
+        .link {
+            text-align: center;
+            animation: link 1s ease-in-out 1s;
+            animation-fill-mode: both;
+            a {
+                width: .34rem;
+                height: .34rem;
+                line-height: .34rem;
+                border-radius: .17rem;
+                margin: .1rem;
+                font-size: .14rem;
+                text-align: center;
+                color: #fff;
+                background-color: #333;
+                transition: background-color 500ms ease-in-out, border-radius 500ms ease-in-out;
+                position: relative;
+                span {
+                    position: absolute;
+                    font-size: .12rem;
+                    top: .39rem;
+                    left: -.25rem + .17rem;
+                    background-color: #333;
+                    width: .5rem;
+                    height: .34rem;
+                    border-radius: .04rem;
+                    opacity: 0;
+                    visibility: hidden;
+                    transition: opacity 500ms ease-in-out, visibility 500ms ease-in-out;
+                    &:before {
+                        display: block;
+                        content: "";
+                        position: absolute;
+                        border: .06rem solid;
+                        top: -.1rem;
+                        left: 50%;
+                        margin-left: -.06rem;
+                        border-color: transparent transparent #333 transparent;
+                    }
+
+                }
+                &:hover {
+                    background-color: #5e578e;
+                    border-radius: .06rem;
+                    span {
+                        visibility: visible;
+                        opacity: 1;
+                    }
+                }
+            }
+        }
+    }
+    .copyright {
+        position: absolute;
+        bottom: .1rem;
+        top: auto;
+        left: 0;
+        right: 0;
+        text-align: center;
+        color: #7b7b7b;
+        user-select: none;
+    }
+}
+
+@keyframes head {
+    0% {
+        opacity: 0;
+        transform: translate3d(0, -10%, 0);
+    }
+    100% {
+        opacity: 1;
+        transform: translate3d(0, 0, 0);
+    }
+}
+
+@keyframes link {
+    0% {
+        opacity: 0;
+        transform: translate3d(0, 10%, 0);
+    }
+    100% {
+        opacity: 1;
+        transform: translate3d(0, 0, 0);
+    }
+}
+
+@keyframes dash {
+    to {
+        stroke-dashoffset: 0;
+    }
+}
